@@ -18,7 +18,7 @@
         href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   <link rel="stylesheet" href="./static/css/index.css">
   <link rel="icon" href="./static/images/favicon.svg">
-
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&family=Baloo+2:wght@400;600&family=Pacifico&family=Caveat:wght@400;600&display=swap" rel="stylesheet">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script defer src="./static/js/fontawesome.all.min.js"></script>
   <script src="./static/js/bulma-carousel.min.js"></script>
@@ -128,7 +128,7 @@
       <div class="columns is-centered has-text-centered" style="width: 100%; margin: 0px 0 0;">
         <div class="column" style="width: 10%; padding: 0;">
             <h2 class="title is-3"> Overview </h2>
-        <img src="static/imgs/Main_fig.png" alt="Teaser" style="width: 100%; height: auto;" />
+        <img src="static/images/main_fig.png" alt="Teaser" style="width: 100%; height: auto;" />
         <figcaption class="custom-caption">
           <strong> Av-Surf Overview.</strong> 
           AV-Surf first train 2DGS with given multi-view images to obtain various type of real-world environment information. Then we utilize two type of encoders, \(\mathit{E}_{\mathcal{P}}\) and \(\mathit{E}_{\mathcal{I}}\), to extract geometry and spatial features, \(\mathit{F}_\mathcal{P}\) and \(\mathit{F}_\mathcal{I}\). We inject spatial cues to position added frequency embeddings \(\mathit{F}_\mathcal{F}\) with iterative transformer layers to learn real world acoustics. After \(\mathit{F}_{acoustic}\) is obtained, AV-Surf follows the method from the previous study to get mixture \(\mathit{M}_m\) and difference \(\mathit{M}_d\) acoustic masks. Finally, our ConvNeXt-based decoder takes sound source and both mixture and difference acoustic masks to generate novel view binaural audio.
@@ -139,113 +139,200 @@
 </div>
 </section>
 
-
-<section class="section">
-  <div class="container is-max-desktop">
-    <!-- Abstract. -->
-    <div class="columns is-centered has-text-centered">
+<section class="section" style="margin-bottom: 0; padding-bottom: 0;">
+  <div class="container is-max-desktop" style="margin-bottom: 0; padding-bottom: 0;">
+    <!-- Model Framework Title -->
+    <div class="columns is-centered has-text-centered mt-0 mb-0">
       <div class="column is-four-fifths">
-        <h2 class="title is-3">Abstract</h2>
+        <h2 class="title is-3" style="margin-bottom: 5px;">Model Framework</h2>
+        
         <div class="content has-text-justified">
-          <p>
-          </p>test
-          Accurately modeling sound propagation with complex real-world environments is essential for Novel View Acoustic Synthesis (NVAS).
-          While previous studies have leveraged visual perception to estimate spatial acoustics, the combined use of surface and structural details from 3D representations in acoustic modeling has been underexplored.
-          In this paper, we propose a surface-geometry aware approach for NVAS, incorporating both surface and geometric priors to improve spatial acoustic modeling.
-          Our approach utilizes a 3D Gaussian Splatting (3DGS)-based framework to derive spatial features that enhance acoustic modeling.
-          To effectively leverage this information, we introduce a Transformer-based model that employs cross-attention mechanisms to combine visual cues with 3D priors, facilitating a more comprehensive understanding of spatial geometry.
-          Additionally, we design a novel ConvNeXt-based decoder that efficiently processes these features, refining spatial details to synthesize high-quality binaural audio.
-          Experimental results on the RWAVS and SoundSpace datasets highlight the necessity of our approach, as it surpasses existing methods in novel view acoustic synthesis.
-          <!-- 이미지 추가 -->
-          <!-- <figure class="image is-centered">
-            <iframe src="/static/images/teaser.pdf" width="100%" height="500px"></iframe>
-            <figcaption>Figure: Our NVAS approach (PDF View)</figcaption>
-          </figure> -->
-          
-
-        </div>
-      </div>
-    </div>
-    <!--/ Overview -->
-
-</section>
-
-
-
-<section class="section">
-  <div class="container is-max-desktop">
-    <!-- Demo Videos -->
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Demo Videos </h2>
-        <div class="content has-text-justified">
-          <p>
+          <p style="margin-bottom: 5px;">
+            We introduce <strong> AV-Surf </strong>, a novel framework for binaural audio generation designed to achieve two key objectives:
+            (i) integration of surface and 3D geometry priors into position-aware frequency embedding using a transformer-based architecture and 
+            (ii) to develop spectral feature enhancing module by leveraging a ConvNeXt-based structure.
           </p>
-          We demonstrate our qualitative demo result videos in ___ Dataset.
-          <!-- 이미지 추가 -->
-          <!-- <figure class="image is-centered">
-            <iframe src="/static/images/teaser.pdf" width="100%" height="500px"></iframe>
-            <figcaption>Figure: Our NVAS approach (PDF View)</figcaption>
-          </figure> -->
-          
-
         </div>
+        <img src="static/images/teaser.png" alt="Teaser" style="width: 80%; height: auto;" />
+        <figcaption class="custom-caption">
+          <strong>  Figure 1. </strong> 
+          Our proposed AV-Surf learns how acoustics interact with
+          various spatial cues in the real world and uses them to predict how
+          a sound source leads to binaural audio from a novel view point. </figcaption>
+
+        <div class="columns is-vcentered mt-0 mb-0" style="margin-top: 5px; margin-bottom: 0;">
+          <!-- 첫 번째 이미지 -->
+          <div class="column is-half has-text-centered">
+            <figure class="image">
+              <img src="/static/images/method_tf.png" alt="Method 1" style="width: 100%; height: 380px; object-fit: contain;">
+              <figcaption class="custom-caption" style="margin-top: 2px;">
+                <strong>(1) Spatial-Frequency Dual Fusion Transformer</strong> 
+              </figcaption>
+            </figure>
+          </div>
+        
+          <!-- 두 번째 이미지 -->
+          <div class="column is-half has-text-centered">
+            <figure class="image">
+              <img src="/static/images/method_decoder.png" alt="Method 2" style="width: 100%; height: 380px; object-fit: contain;">
+              <figcaption class="custom-caption" style="margin-top: 2px;">
+                <strong> (2) Spectral Refinement Network (SRN) </strong> 
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+
       </div>
     </div>
-    <!--/Demo Videos. -->
-
+  </div>
 </section>
+
+<br>
+</br>
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+    <!-- Comparison -->
+    <div class="columns is-centered has-text-centered" style="width: 100%; margin: 15px 10px 0;">
+        <div class="column" style="width: 100%; padding: 0;">
+            <h2 class="title is-3"> Demo Videos </h2>
+            <br>
+            <h2 class="subtitle" style="font-family: 'Kalam', cursive; font-size: 1.4em;">
+              
+            </h2>
+            <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Scene Editing Results</title>
+            <!-- Bootstrap CSS -->
+            <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+            <head>
+              <meta charset="UTF-8">
+              <meta name="viewport" content="width=device-width, initial-scale=1.0">
+              <title>Comparison Slider</title>
+              <link rel="stylesheet" href="static/css/slidebar-container.css">
+            </head>
+            <!-- Tabs -->
+            <nav>
+              <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                <a class="nav-item nav-link active" id="nav-home-tab" data-bs-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">Office</a>
+                <a class="nav-item nav-link" id="nav-bonsai-tab" data-bs-toggle="tab" href="#nav-bonsai" role="tab" aria-controls="nav-bonsai" aria-selected="false">House</a>
+                <a class="nav-item nav-link" id="nav-bicycle-tab" data-bs-toggle="tab" href="#nav-bicycle" role="tab" aria-controls="nav-bicycle" aria-selected="false">Apartment</a>
+                <a class="nav-item nav-link" id="nav-person-tab" data-bs-toggle="tab" href="#nav-person" role="tab" aria-controls="nav-person" aria-selected="false">Outdoors</a>
+              </div>
+            </nav>
+            <!-- Tabs Content -->
+            <div class="tab-content" id="nav-tabContent">
+              <!-- Office Tab -->
+              <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+                <div class="container h-100 pt-3 pb-3">
+                  <div class="custom-video-block-face">
+
+                    <div class="video-compare-container-face" data-slider>
+                      <video class="left-video" id="face-left-video" loop autoplay>
+                        <source src="EditSplat_RENDERING_RESULTS/RENDERING_RESULTS/face_Make_his_face_resemble_that_of_a_marble_sculpture.mp4" type="video/mp4">
+                      </video>
+                      <div class="slider-bar">
+                        <div class="slider-divider"></div>
+                        <video class="right-video" id="face-right-video" loop autoplay>
+                          <source src="static/DGE_rendering_results/face_marble_DGE.mp4" type="video/mp4">
+                        </video>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- House Tab -->
+              <div class="tab-pane fade" id="nav-bonsai" role="tabpanel" aria-labelledby="nav-bonsai-tab">
+                <div class="container h-100 pt-3 pb-3">
+                  <div class="custom-video-block">
+
+
+                    <div class="video-compare-container" data-slider>
+                      <video class="left-video" id="bonsai-left-video" loop autoplay>
+                        <source src="EditSplat_RENDERING_RESULTS/RENDERING_RESULTS/bonsai_Make_the_bonsai_snowy.mp4" type="video/mp4">
+                      </video>
+                      <div class="slider-bar">
+                        <div class="slider-divider"></div>
+                        <video class="right-video" id="bonsai-right-video" loop autoplay>
+                          <source src="static/DGE_rendering_results/bonsai_snowy_DGE.mp4" type="video/mp4">
+                        </video>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            <!-- Apartment Tab -->
+            <div class="tab-pane fade" id="nav-bicycle" role="tabpanel" aria-labelledby="nav-bicycle-tab">
+              <div class="container h-100 pt-3 pb-3">
+                <div class="custom-video-block">
+
+                  <div class="video-compare-container" data-slider>
+                    <video class="left-video" id="bicycle-left-video" loop autoplay>
+                      <source src="EditSplat_RENDERING_RESULTS/RENDERING_RESULTS/bicycle_Turn_the_ground_into_a_namibian_desert.mp4" type="video/mp4">
+                    </video>
+                    <div class="slider-bar">
+                      <div class="slider-divider"></div>
+                      <video class="right-video" id="bicycle-right-video" loop autoplay>
+                        <source src="static/DGE_rendering_results/bicycle_desert_DGE.mp4" type="video/mp4">
+                      </video>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Outdoors Tab -->
+            <div class="tab-pane fade" id="nav-person" role="tabpanel" aria-labelledby="nav-person-tab">
+            <div class="container h-100 pt-3 pb-3">
+              <div class="custom-video-block-person">
+
+                <div class="video-compare-container-person" data-slider>
+                  <video class="left-video" id="person-left-video" loop autoplay>
+                    <source src="EditSplat_RENDERING_RESULTS/RENDERING_RESULTS/person_Turn_him_into_a_Minecraft_character.mp4" type="video/mp4">
+                  </video>
+                  <div class="slider-bar">
+                    <div class="slider-divider"></div>
+                    <video class="right-video" id="person-right-video" loop autoplay>
+                      <source src="static/DGE_rendering_results/person_minecraft_DGE.mp4" type="video/mp4">
+                    </video>
+                  </div>
+                </div>
+              </div>
+            </div>
+            </div>
+          
+            <!-- Bootstrap JS -->
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+            <!-- Custom Slider Logic -->
+            <script src="static/js/slidebar-container.js"></script>
+            </body>
+            </html>
 
 
 <section class="section">
   <div class="container is-max-desktop">
-    <!-- Demo Videos -->
+    <!--Quantitative results -->
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
         <h2 class="title is-3">Quantitative Results </h2>
         <div class="content has-text-justified">
           <p>
           </p>
-          We demonstrate our qualitative demo result videos in ___ Dataset.
-          <!-- 이미지 추가 -->
-          <!-- <figure class="image is-centered">
-            <iframe src="/static/images/teaser.pdf" width="100%" height="500px"></iframe>
-            <figcaption>Figure: Our NVAS approach (PDF View)</figcaption>
-          </figure> -->
-          
+          <figure>
+          <img src="static/images/quantitative_results.png" alt="Teaser" style="width: 100%; height: auto;" />
+          <figcaption class="custom-caption" style="margin-top: 2px;">
+            <strong>Table 1.</strong> Quantitative results on real-world RWAVS dataset. Bold indicates the best, while the second-best is underlined.
+          </figcaption>
+        </figure>
 
         </div>
       </div>
     </div>
-    <!--/Demo Videos. -->
+    <!--/Quantitative. -->
 
 </section>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- <section class="section" id="BibTeX">
-  <div class="container is-max-desktop content">
-    <h2 class="title">BibTeX</h2>
-    <pre><code>@article{av-surf,
-
-
-}</code></pre>
-  </div>
-</section> -->
 
 
 <footer class="footer">
