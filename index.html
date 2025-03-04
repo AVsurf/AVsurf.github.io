@@ -188,6 +188,10 @@
 </section>
 
 <br>
+<br>
+<br>
+</br>
+</br>
 </br>
 
 <section class="hero teaser">
@@ -197,9 +201,8 @@
     <div class="columns is-centered has-text-centered" style="width: 100%; margin: 15px 10px 0;">
         <div class="column" style="width: 100%; padding: 0;">
             <h2 class="title is-3"> Demo Videos </h2>
-            <br>
-            <h2 class="subtitle" style="font-family: 'Raleway', sans-serif; text-align: center; font-size: 1.3em;">
-              We provide the demo result videos on real-world <strong> RWAVS </strong> dataset! <br> 
+            <h2 class="subtitle" style="font-family: 'Raleway', margin-top: 10px; sans-serif; text-align: center; font-size: 1.3em;">
+              We provide the demo result videos on real-world <strong> RWAVS </strong> dataset! 🔊 <br> 
               😊 Click the below button to change the scene 😊
             </h2>
             <head>
@@ -208,25 +211,21 @@
             <title> Novel View Acoustic Synthesis Demo videos results</title>
             <!-- Bootstrap CSS -->
             <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-            <head>
-              <meta charset="UTF-8">
-              <meta name="viewport" content="width=device-width, initial-scale=1.0">
-              <title>Comparison Slider</title>
-              <link rel="stylesheet" href="static/css/slidebar-container.css">
-            </head>
+
             <!-- Tabs -->
             <nav>
               <div class="nav nav-tabs" id="nav-tab" role="tablist">
-                <a class="nav-item nav-link active" id="nav-home-tab" data-bs-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">Office</a>
-                <a class="nav-item nav-link" id="nav-bonsai-tab" data-bs-toggle="tab" href="#nav-bonsai" role="tab" aria-controls="nav-bonsai" aria-selected="false">House</a>
-                <a class="nav-item nav-link" id="nav-bicycle-tab" data-bs-toggle="tab" href="#nav-bicycle" role="tab" aria-controls="nav-bicycle" aria-selected="false">Apartment</a>
-                <a class="nav-item nav-link" id="nav-person-tab" data-bs-toggle="tab" href="#nav-person" role="tab" aria-controls="nav-person" aria-selected="false">Outdoors</a>
+                <a class="nav-item nav-link active" id="nav-office-tab" data-bs-toggle="tab" href="#nav-office" role="tab" aria-controls="nav-office" aria-selected="true">Office</a>
+                <a class="nav-item nav-link" id="nav-house-tab" data-bs-toggle="tab" href="#nav-house" role="tab" aria-controls="nav-house" aria-selected="false">House</a>
+                <a class="nav-item nav-link" id="nav-apartment-tab" data-bs-toggle="tab" href="#nav-apartment" role="tab" aria-controls="nav-apartment" aria-selected="false">Apartment</a>
+                <a class="nav-item nav-link" id="nav-outdoors-tab" data-bs-toggle="tab" href="#nav-outdoors" role="tab" aria-controls="nav-outdoors" aria-selected="false">Outdoors</a>
               </div>
             </nav>
+
             <!-- Tabs Content -->
             <div class="tab-content" id="nav-tabContent">
               <!-- Office Tab -->
-              <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+              <div class="tab-pane fade show active" id="nav-office" role="tabpanel" aria-labelledby="nav-office-tab">
                 <div class="container h-100 pt-3 pb-3">
                   <div class="custom-video-block-face">
 
@@ -235,65 +234,50 @@
                         <source src="static/videos/first_30s_only_video.mp4" type="video/mp4">
                       </video>
                     </div>
-
+                  </div>
+                </div>
+              </div>
 
               <!-- House Tab -->
-              <div class="tab-pane fade" id="nav-bonsai" role="tabpanel" aria-labelledby="nav-bonsai-tab">
+              <div class="tab-pane fade" id="nav-house" role="tabpanel" aria-labelledby="nav-house-tab">
                 <div class="container h-100 pt-3 pb-3">
                   <div class="custom-video-block">
 
-
-                    <div class="video-compare-container" data-slider>
-                      <video class="left-video" id="bonsai-left-video" loop autoplay>
-                        <source src="/home/gyusam/Desktop/output_wavs/first_30s_video.mp4" type="video/mp4">
+                    <div class="single-video-container">
+                      <video class="single-video" id="face-video" controls autoplay loop>
+                        <source src="static/videos/first_30s_only_video.mp4" type="video/mp4">
                       </video>
-                      <div class="slider-bar">
-                        <div class="slider-divider"></div>
-                        <video class="right-video" id="bonsai-right-video" loop autoplay>
-                          <source src="static/DGE_rendering_results/bonsai_snowy_DGE.mp4" type="video/mp4">
-                        </video>
-                      </div>
                     </div>
                   </div>
                 </div>
               </div>
+          
             <!-- Apartment Tab -->
-            <div class="tab-pane fade" id="nav-bicycle" role="tabpanel" aria-labelledby="nav-bicycle-tab">
+            <div class="tab-pane fade" id="nav-apartment" role="tabpanel" aria-labelledby="nav-apartment-tab">
               <div class="container h-100 pt-3 pb-3">
                 <div class="custom-video-block">
 
-                  <div class="video-compare-container" data-slider>
-                    <video class="left-video" id="bicycle-left-video" loop autoplay>
-                      <source src="EditSplat_RENDERING_RESULTS/RENDERING_RESULTS/bicycle_Turn_the_ground_into_a_namibian_desert.mp4" type="video/mp4">
+                  <div class="single-video-container">
+                    <video class="single-video" id="face-video" controls autoplay loop>
+                      <source src="static/videos/first_30s_only_video.mp4" type="video/mp4">
                     </video>
-                    <div class="slider-bar">
-                      <div class="slider-divider"></div>
-                      <video class="right-video" id="bicycle-right-video" loop autoplay>
-                        <source src="static/DGE_rendering_results/bicycle_desert_DGE.mp4" type="video/mp4">
-                      </video>
-                    </div>
                   </div>
                 </div>
               </div>
             </div>
-            <!-- Outdoors Tab -->
-            <div class="tab-pane fade" id="nav-person" role="tabpanel" aria-labelledby="nav-person-tab">
-            <div class="container h-100 pt-3 pb-3">
-              <div class="custom-video-block-person">
 
-                <div class="video-compare-container-person" data-slider>
-                  <video class="left-video" id="person-left-video" loop autoplay>
-                    <source src="EditSplat_RENDERING_RESULTS/RENDERING_RESULTS/person_Turn_him_into_a_Minecraft_character.mp4" type="video/mp4">
-                  </video>
-                  <div class="slider-bar">
-                    <div class="slider-divider"></div>
-                    <video class="right-video" id="person-right-video" loop autoplay>
-                      <source src="static/DGE_rendering_results/person_minecraft_DGE.mp4" type="video/mp4">
+            <!-- Outdoors Tab -->
+            <div class="tab-pane fade" id="nav-outdoors" role="tabpanel" aria-labelledby="nav-outdoors-tab">
+              <div class="container h-100 pt-3 pb-3">
+                <div class="custom-video-block">
+
+                  <div class="single-video-container">
+                    <video class="single-video" id="face-video" controls autoplay loop>
+                      <source src="static/videos/first_30s_only_video.mp4" type="video/mp4">
                     </video>
                   </div>
                 </div>
               </div>
-            </div>
             </div>
           
             <!-- Bootstrap JS -->
@@ -303,6 +287,9 @@
             </body>
             </html>
 
+<br>
+</br>
+<br>
 
 <section class="section">
   <div class="container is-max-desktop">
