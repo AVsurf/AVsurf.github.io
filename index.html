@@ -139,8 +139,11 @@
 </div>
 </section>
 
-<section class="section" style="margin-bottom: 0; padding-bottom: 0;">
-  <div class="container is-max-desktop" style="margin-bottom: 0; padding-bottom: 0;">
+<br>
+ </br>
+
+<section class="hero teaser">
+  <div class="container is-max-desktop" style="margin-bottom: 5px;margin-top: 5px; padding-bottom: 0;">
     <!-- Model Framework Title -->
     <div class="columns is-centered has-text-centered mt-0 mb-0">
       <div class="column is-four-fifths">
@@ -189,8 +192,6 @@
 
 <br>
 <br>
-<br>
-</br>
 </br>
 </br>
 
@@ -201,7 +202,7 @@
     <div class="columns is-centered has-text-centered" style="width: 100%; margin: 15px 10px 0;">
         <div class="column" style="width: 100%; padding: 0;">
             <h2 class="title is-3"> Demo Videos </h2>
-            <h2 class="subtitle" style="font-family: 'Raleway', margin-top: 15px; margin-bottom: 5px; sans-serif; text-align: center; font-size: 1.3em;">
+            <h2 class="subtitle" style="font-family: 'Raleway', sans-serif; margin-top: 15px; margin-bottom: 5px; text-align: center; font-size: 1.3em;">
               We provide the demo result videos on real-world <strong> RWAVS </strong> dataset! 🔊 <br> 
               😊 Click the below button to change the scene 😊
             </h2>
@@ -232,7 +233,9 @@
                   <div class="custom-video-block-face">
 
                     <div class="single-video-container">
-                      <video class="single-video" id="face-video" controls autoplay loop>
+                      <!-- <video class="single-video" id="face-video" controls autoplay loop> -->
+                        <video class="single-video" id="face-video" controls loop>
+
                         <source src="static/videos/scene_1_30s.mp4" type="video/mp4">
                       </video>
                     </div>
@@ -246,7 +249,8 @@
                   <div class="custom-video-block">
 
                     <div class="single-video-container">
-                      <video class="single-video" id="face-video" controls autoplay loop>
+                      <!-- <video class="single-video" id="face-video" controls autoplay loop> -->
+                        <video class="single-video" id="face-video" controls loop></video>
                         <source src="static/videos/scene_6_30s.mp4" type="video/mp4">
                       </video>
                     </div>
@@ -260,7 +264,8 @@
                 <div class="custom-video-block">
 
                   <div class="single-video-container">
-                    <video class="single-video" id="face-video" controls autoplay loop>
+                    <!-- <video class="single-video" id="face-video" controls autoplay loop> -->
+                      <video class="single-video" id="face-video" controls loop></video>
                       <source src="static/videos/scene_9_30s.mp4" type="video/mp4">
                     </video>
                   </div>
@@ -274,7 +279,8 @@
                 <div class="custom-video-block">
 
                   <div class="single-video-container">
-                    <video class="single-video" id="face-video" controls autoplay loop>
+                    <!-- <video class="single-video" id="face-video" controls autoplay loop> -->
+                      <video class="single-video" id="face-video" controls loop></video>
                       <source src="static/videos/scene_12_30s.mp4" type="video/mp4">
                     </video>
                   </div>
@@ -313,6 +319,30 @@
       </div>
     </div>
     <!--/Quantitative. -->
+
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!--Qualitative results -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Quantitative Results </h2>
+        <div class="content has-text-justified">
+          <p>
+          </p>
+          <figure>
+          <img src="static/images/qual_final.png" alt="Teaser" style="width: 100%; height: auto;" />
+          <figcaption class="custom-caption" style="margin-top: 2px;">
+            <strong>Figure 2.</strong> Qualitative results on RWAVS dataset. Comparison of AV-Surf, AV-NeRF, and AV-GS against the Ground-truth.
+          </figcaption>
+        </figure>
+
+        </div>
+      </div>
+    </div>
+    <!--/Quanlitative. -->
 
 </section>
 
