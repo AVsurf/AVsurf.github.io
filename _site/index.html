@@ -130,7 +130,7 @@
         <div class="column" style="width: 100%; padding: 0;">
             <h2 class="title is-3"> Overview </h2>
 
-        <img src="static/images/main_fig.png" alt="Teaser" style="width: 100%; margin-bottom:10px; height: auto;" />
+        <img src="static/images/main_fig_fin.png" alt="Teaser" style="width: 100%; margin-bottom:10px; height: auto;" />
         <figcaption class="custom-caption">
           <strong> AV-Surf Overview.</strong> 
           AV-Surf first train 2DGS with given multi-view images to obtain various type of real-world environment information. Then we utilize two type of encoders, \(\mathit{E}_{\mathcal{P}}\) and \(\mathit{E}_{\mathcal{I}}\), to extract geometry and spatial features, \(\mathit{F}_\mathcal{P}\) and \(\mathit{F}_\mathcal{I}\). We inject spatial cues to position added frequency embeddings \(\mathit{F}_\mathcal{F}\) with iterative transformer layers to learn real world acoustics. After \(\mathit{F}_{acoustic}\) is obtained, AV-Surf follows the method from the previous study to get mixture \(\mathit{M}_m\) and difference \(\mathit{M}_d\) acoustic masks. Finally, our ConvNeXt-based decoder takes sound source and both mixture and difference acoustic masks to generate novel view binaural audio.
@@ -152,13 +152,9 @@
         <h2 class="title is-3" style="margin-bottom: 5px;">Model Framework</h2>
         
         <div class="content has-text-justified">
-          <p style="margin-bottom: 5px;">
-            We introduce <strong> AV-Surf </strong>, a novel framework for binaural audio generation designed to achieve two key objectives:
-            (i) integration of surface and 3D geometry priors into position-aware frequency embedding using a transformer-based architecture and 
-            (ii) to develop spectral feature enhancing module by leveraging a ConvNeXt-based structure.
-          </p>
+        
         </div>
-        <img src="static/images/teaser.png" alt="Teaser" style="width: 80%; height: auto;" />
+        <img src="static/images/teaser_new.png" alt="Teaser" style="width: 55%; height: auto;" />
         <figcaption class="custom-caption">
           <strong>  Figure 1. </strong> 
           Our proposed AV-Surf learns how acoustics interact with
@@ -185,8 +181,13 @@
               </figcaption>
             </figure>
           </div>
+          
         </div>
-
+        <p style="margin-bottom: 5px;">
+          We introduce <strong> AV-Surf </strong>, a novel framework for binaural audio generation designed to achieve two key objectives:
+          (i) integration of surface and 3D geometry priors into position-aware frequency embedding using a transformer-based architecture and 
+          (ii) to develop spectral feature enhancing module by leveraging a ConvNeXt-based structure.
+        </p>
       </div>
     </div>
   </div>
@@ -255,7 +256,7 @@
                     <div class="single-video-container">
                       <!-- <video class="single-video" id="face-video" controls autoplay loop> -->
                         <video class="single-video" id="face-video" controls loop>
-                          <source src="static/videos/scene_6_30s.mp4" type="video/mp4">
+                          <source src="static/videos/0307_audio_syn_video_6_30s.mp4" type="video/mp4">
                       </video>
                     </div>
                   </div>
@@ -270,7 +271,7 @@
                   <div class="single-video-container">
                     <!-- <video class="single-video" id="face-video" controls autoplay loop> -->
                       <video class="single-video" id="face-video" controls loop>
-                        <source src="static/videos/scene_9_30s.mp4" type="video/mp4">
+                        <source src="static/videos/0307_audio_syn_video_9_30s.mp4" type="video/mp4">
                     </video>
                   </div>
                 </div>
@@ -355,7 +356,7 @@
           <p>
           </p>
           <figure>
-          <img src="static/images/qual_final.png" alt="Teaser" style="width: 100%; height: auto;" />
+          <img src="static/images/qual_final_2.png" alt="Teaser" style="width: 100%; height: auto;" />
           <figcaption class="custom-caption" style="margin-top: 2px;">
             <strong>Figure 2.</strong> Qualitative results on RWAVS dataset. Comparison of AV-Surf, AV-NeRF, and AV-GS against the Ground-truth.
           </figcaption>
