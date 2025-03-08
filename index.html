@@ -10,20 +10,20 @@
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
         rel="stylesheet">
 
-  <link rel="stylesheet" href="./static/css/bulma.min.css">
-  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
-  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
-  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="./Demo_results/css/bulma.min.css">
+  <link rel="stylesheet" href="./Demo_results/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./Demo_results/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./Demo_results/css/fontawesome.all.min.css">
   <link rel="stylesheet"
         href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
-  <link rel="stylesheet" href="./static/css/index.css">
-  <link rel="icon" href="./static/images/favicon.svg">
+  <link rel="stylesheet" href="./Demo_results/css/index.css">
+  <link rel="icon" href="./Demo_results/images/favicon.svg">
   <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&family=Baloo+2:wght@400;600&family=Pacifico&family=Caveat:wght@400;600&display=swap" rel="stylesheet">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script defer src="./static/js/fontawesome.all.min.js"></script>
-  <script src="./static/js/bulma-carousel.min.js"></script>
-  <script src="./static/js/bulma-slider.min.js"></script>
-  <script src="./static/js/index.js"></script>
+  <script defer src="./Demo_results/js/fontawesome.all.min.js"></script>
+  <script src="./Demo_results/js/bulma-carousel.min.js"></script>
+  <script src="./Demo_results/js/bulma-slider.min.js"></script>
+  <script src="./Demo_results/js/index.js"></script>
   <script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
   <script>
     window.MathJax = {
@@ -130,7 +130,7 @@
         <div class="column" style="width: 100%; padding: 0;">
             <h2 class="title is-3"> Overview </h2>
 
-        <img src="static/images/main_fig_fin.png" alt="Teaser" style="width: 100%; margin-bottom:10px; height: auto;" />
+        <img src="Demo_results/images/main_fig_fin.png" alt="Teaser" style="width: 100%; margin-bottom:10px; height: auto;" />
         <figcaption class="custom-caption">
           <strong> AV-Surf Overview.</strong> 
           AV-Surf first train 2DGS with given multi-view images to obtain various type of real-world environment information. Then we utilize two type of encoders, \(\mathit{E}_{\mathcal{P}}\) and \(\mathit{E}_{\mathcal{I}}\), to extract geometry and spatial features, \(\mathit{F}_\mathcal{P}\) and \(\mathit{F}_\mathcal{I}\). We inject spatial cues to position added frequency embeddings \(\mathit{F}_\mathcal{F}\) with iterative transformer layers to learn real world acoustics. After \(\mathit{F}_{acoustic}\) is obtained, AV-Surf follows the method from the previous study to get mixture \(\mathit{M}_m\) and difference \(\mathit{M}_d\) acoustic masks. Finally, our ConvNeXt-based decoder takes sound source and both mixture and difference acoustic masks to generate novel view binaural audio.
@@ -154,7 +154,7 @@
         <div class="content has-text-justified">
         
         </div>
-        <img src="static/images/teaser_new.png" alt="Teaser" style="width: 55%; height: auto;" />
+        <img src="Demo_results/images/teaser_new.png" alt="Teaser" style="width: 55%; height: auto;" />
         <figcaption class="custom-caption">
           <strong>  Figure 1. </strong> 
           Our proposed AV-Surf learns how acoustics interact with
@@ -165,7 +165,7 @@
           <!-- 첫 번째 이미지 -->
           <div class="column is-half has-text-centered">
             <figure class="image">
-              <img src="/static/images/method_tf.png" alt="Method 1" style="width: 100%; height: 380px; object-fit: contain;">
+              <img src="/Demo_results/images/method_tf.png" alt="Method 1" style="width: 100%; height: 380px; object-fit: contain;">
               <figcaption class="custom-caption" style="margin-top: 2px;">
                 <strong>(1) Spatial-Frequency Dual Fusion Transformer</strong> 
               </figcaption>
@@ -175,7 +175,7 @@
           <!-- 두 번째 이미지 -->
           <div class="column is-half has-text-centered">
             <figure class="image">
-              <img src="/static/images/method_decoder.png" alt="Method 2" style="width: 100%; height: 380px; object-fit: contain;">
+              <img src="/Demo_results/images/method_decoder.png" alt="Method 2" style="width: 100%; height: 380px; object-fit: contain;">
               <figcaption class="custom-caption" style="margin-top: 2px;">
                 <strong> (2) Spectral Refinement Network (SRN) </strong> 
               </figcaption>
@@ -240,13 +240,13 @@
       <div class="video-block">
         <h3 class="video-label">Ours</h3>
         <video class="video-half" controls loop>
-          <source src="static/videos/scene2_audio_result_ours.mp4" type="video/mp4">
+          <source src="Demo_results/videos/scene2_audio_result_ours.mp4" type="video/mp4">
         </video>
       </div>
       <div class="video-block">
         <h3 class="video-label">Ground-Truth</h3>
         <video class="video-half" controls loop>
-          <source src="static/videos/scene2_audio_result_GT.mp4" type="video/mp4">
+          <source src="Demo_results/videos/scene2_audio_result_GT.mp4" type="video/mp4">
         </video>
       </div>
     </div>
@@ -258,13 +258,13 @@
       <div class="video-block">
         <h3 class="video-label">Ours</h3>
         <video class="video-half" controls loop>
-          <source src="static/videos/scene6_audio_result_ours.mp4" type="video/mp4">
+          <source src="Demo_results/videos/scene6_audio_result_ours.mp4" type="video/mp4">
         </video>
       </div>
       <div class="video-block">
         <h3 class="video-label">Ground-Truth</h3>
         <video class="video-half" controls loop>
-          <source src="static/videos/scene6_audio_result_GT.mp4" type="video/mp4">
+          <source src="Demo_results/videos/scene6_audio_result_GT.mp4" type="video/mp4">
         </video>
       </div>
     </div>
@@ -276,13 +276,13 @@
       <div class="video-block">
         <h3 class="video-label">Ours</h3>
         <video class="video-half" controls loop>
-          <source src="static/videos/scene9_audio_result_ours.mp4" type="video/mp4">
+          <source src="Demo_results/videos/scene9_audio_result_ours.mp4" type="video/mp4">
         </video>
       </div>
       <div class="video-block">
         <h3 class="video-label">Ground-Truth</h3>
         <video class="video-half" controls loop>
-          <source src="static/videos/scene9_audio_result_GT.mp4" type="video/mp4">
+          <source src="Demo_results/videos/scene9_audio_result_GT.mp4" type="video/mp4">
         </video>
       </div>
     </div>
@@ -294,13 +294,13 @@
       <div class="video-block">
         <h3 class="video-label">Ours</h3>
         <video class="video-half" controls loop>
-          <source src="static/videos/scene12_audio_result_ours.mp4" type="video/mp4">
+          <source src="Demo_results/videos/scene12_audio_result_ours.mp4" type="video/mp4">
         </video>
       </div>
       <div class="video-block">
         <h3 class="video-label">Ground-Truth</h3>
         <video class="video-half" controls loop>
-          <source src="static/videos/scene12_audio_result_GT.mp4" type="video/mp4">
+          <source src="Demo_results/videos/scene12_audio_result_GT.mp4" type="video/mp4">
         </video>
       </div>
     </div>
@@ -398,7 +398,7 @@ document.addEventListener("DOMContentLoaded", function () {
           <p>
           </p>
           <figure>
-          <img src="static/images/quantitative_results.png" alt="Teaser" style="width: 100%; height: auto;" />
+          <img src="Demo_results/images/quantitative_results.png" alt="Teaser" style="width: 100%; height: auto;" />
           <figcaption class="custom-caption" style="margin-top: 2px;">
             <strong>Table 1.</strong> Quantitative results on real-world RWAVS dataset. Bold indicates the best, while the second-best is underlined.
           </figcaption>
@@ -418,7 +418,7 @@ document.addEventListener("DOMContentLoaded", function () {
   <div class="container">
     <div class="content has-text-centered">
       <a class="icon-link"
-         href="./static/videos/nerfies_paper.pdf">
+         href="./Demo_results/videos/nerfies_paper.pdf">
         <i class="fas fa-file-pdf"></i>
       </a>
       <a class="icon-link" href="https://github.com/keunhong" class="external-link" disabled>
