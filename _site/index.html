@@ -217,125 +217,151 @@
             <title> Novel View Acoustic Synthesis Demo videos results</title>
             <!-- Bootstrap CSS -->
             <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Tabs -->
 <!-- Tabs -->
 <div class="container">
   <nav>
     <div class="nav nav-tabs" id="nav-tab" role="tablist">
-      <!-- 기존 탭 -->
       <a class="nav-item nav-link active" id="nav-office-tab" data-bs-toggle="tab" href="#nav-office" role="tab" aria-controls="nav-office" aria-selected="true">Office</a>
       <a class="nav-item nav-link" id="nav-house-tab" data-bs-toggle="tab" href="#nav-house" role="tab" aria-controls="nav-house" aria-selected="false">House</a>
       <a class="nav-item nav-link" id="nav-apartment-tab" data-bs-toggle="tab" href="#nav-apartment" role="tab" aria-controls="nav-apartment" aria-selected="false">Apartment</a>
       <a class="nav-item nav-link" id="nav-outdoors-tab" data-bs-toggle="tab" href="#nav-outdoors" role="tab" aria-controls="nav-outdoors" aria-selected="false">Outdoors</a>
-
-      <!-- 새로운 GT 탭 (오른쪽 추가) -->
-      <a class="nav-item nav-link" id="nav-gt-office-tab" data-bs-toggle="tab" href="#nav-gt-office" role="tab" aria-controls="nav-gt-office" aria-selected="false">Office Ground-Truth</a>
-      <a class="nav-item nav-link" id="nav-gt-house-tab" data-bs-toggle="tab" href="#nav-gt-house" role="tab" aria-controls="nav-gt-house" aria-selected="false">House Ground-Truth</a>
-      <a class="nav-item nav-link" id="nav-gt-apartment-tab" data-bs-toggle="tab" href="#nav-gt-apartment" role="tab" aria-controls="nav-gt-apartment" aria-selected="false">Apartment Ground-Truth</a>
-      <a class="nav-item nav-link" id="nav-gt-outdoors-tab" data-bs-toggle="tab" href="#nav-gt-outdoors" role="tab" aria-controls="nav-gt-outdoors" aria-selected="false">Outdoors Ground-Truth</a>
     </div>
   </nav>
 </div>
 
 <!-- Tabs Content -->
 <div class="tab-content" id="nav-tabContent">
-  <!-- 기존 탭 (비디오) -->
+
+  <!-- Office -->
   <div class="tab-pane fade show active" id="nav-office" role="tabpanel" aria-labelledby="nav-office-tab">
-    <div class="container h-100 pt-3 pb-3">
-      <div class="custom-video-block">
-        <div class="single-video-container">
-          <video class="single-video" id="face-video" controls loop>
-            <source src="static/videos/FINAL_audio_syn_video_2_30s.mp4" type="video/mp4">
-          </video>
-        </div>
+    <div class="video-container">
+      <div class="video-block">
+        <h3 class="video-label">Ours</h3>
+        <video class="video-half" controls loop>
+          <source src="static/videos/FINAL_audio_syn_video_2_30s.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="video-block">
+        <h3 class="video-label">Ground-Truth</h3>
+        <video class="video-half" controls loop>
+          <source src="static/videos/FINAL_audio_syn_video_2_30s_GT.mp4" type="video/mp4">
+        </video>
       </div>
     </div>
   </div>
 
+  <!-- House -->
   <div class="tab-pane fade" id="nav-house" role="tabpanel" aria-labelledby="nav-house-tab">
-    <div class="container h-100 pt-3 pb-3">
-      <div class="custom-video-block">
-        <div class="single-video-container">
-          <video class="single-video" id="face-video" controls loop>
-            <source src="static/videos/FINAL_audio_syn_video_6_30s.mp4" type="video/mp4">
-          </video>
-        </div>
+    <div class="video-container">
+      <div class="video-block">
+        <h3 class="video-label">Ours</h3>
+        <video class="video-half" controls loop>
+          <source src="static/videos/FINAL_audio_syn_video_6_30s.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="video-block">
+        <h3 class="video-label">Ground-Truth</h3>
+        <video class="video-half" controls loop>
+          <source src="static/videos/GT_house.mp4" type="video/mp4">
+        </video>
       </div>
     </div>
   </div>
 
+  <!-- Apartment -->
   <div class="tab-pane fade" id="nav-apartment" role="tabpanel" aria-labelledby="nav-apartment-tab">
-    <div class="container h-100 pt-3 pb-3">
-      <div class="custom-video-block">
-        <div class="single-video-container">
-          <video class="single-video" id="face-video" controls loop>
-            <source src="static/videos/0307_audio_syn_video_9_30s.mp4" type="video/mp4">
-          </video>
-        </div>
+    <div class="video-container">
+      <div class="video-block">
+        <h3 class="video-label">Ours</h3>
+        <video class="video-half" controls loop>
+          <source src="static/videos/0307_audio_syn_video_9_30s.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="video-block">
+        <h3 class="video-label">Ground-Truth</h3>
+        <video class="video-half" controls loop>
+          <source src="static/videos/GT_apartment.mp4" type="video/mp4">
+        </video>
       </div>
     </div>
   </div>
 
+  <!-- Outdoors -->
   <div class="tab-pane fade" id="nav-outdoors" role="tabpanel" aria-labelledby="nav-outdoors-tab">
-    <div class="container h-100 pt-3 pb-3">
-      <div class="custom-video-block">
-        <div class="single-video-container">
-          <video class="single-video" id="face-video" controls loop>
-            <source src="static/videos/0307_audio_syn_video_12_30s.mp4" type="video/mp4">
-          </video>
-        </div>
+    <div class="video-container">
+      <div class="video-block">
+        <h3 class="video-label">Ours</h3>
+        <video class="video-half" controls loop>
+          <source src="static/videos/0307_audio_syn_video_12_30s.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="video-block">
+        <h3 class="video-label">Ground-Truth</h3>
+        <video class="video-half" controls loop>
+          <source src="static/videos/GT_outdoors.mp4" type="video/mp4">
+        </video>
       </div>
     </div>
   </div>
 
-  <!-- GT 탭 (Ground Truth 영상) -->
-  <div class="tab-pane fade" id="nav-gt-office" role="tabpanel" aria-labelledby="nav-gt-office-tab">
-    <div class="container h-100 pt-3 pb-3">
-      <div class="custom-video-block">
-        <div class="single-video-container">
-          <video class="single-video" id="gt-office-video" controls loop>
-            <source src="static/videos/FINAL_audio_syn_video_2_30s_GT.mp4" type="video/mp4">
-          </video>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="tab-pane fade" id="nav-gt-house" role="tabpanel" aria-labelledby="nav-gt-house-tab">
-    <div class="container h-100 pt-3 pb-3">
-      <div class="custom-video-block">
-        <div class="single-video-container">
-          <video class="single-video" id="gt-house-video" controls loop>
-            <source src="static/videos/GT_house.mp4" type="video/mp4">
-          </video>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="tab-pane fade" id="nav-gt-apartment" role="tabpanel" aria-labelledby="nav-gt-apartment-tab">
-    <div class="container h-100 pt-3 pb-3">
-      <div class="custom-video-block">
-        <div class="single-video-container">
-          <video class="single-video" id="gt-apartment-video" controls loop>
-            <source src="static/videos/GT_apartment.mp4" type="video/mp4">
-          </video>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="tab-pane fade" id="nav-gt-outdoors" role="tabpanel" aria-labelledby="nav-gt-outdoors-tab">
-    <div class="container h-100 pt-3 pb-3">
-      <div class="custom-video-block">
-        <div class="single-video-container">
-          <video class="single-video" id="gt-outdoors-video" controls loop>
-            <source src="static/videos/GT_outdoors.mp4" type="video/mp4">
-          </video>
-        </div>
-      </div>
-    </div>
-  </div>
 </div>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Custom Script: 모든 비디오 정지 후 재생 초기화 -->
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    var tabs = document.querySelectorAll('[data-bs-toggle="tab"]');
+    tabs.forEach(function (tab) {
+        tab.addEventListener("shown.bs.tab", function () {
+            document.querySelectorAll("video").forEach(function (video) {
+                video.pause();
+                video.currentTime = 0;
+            });
+        });
+    });
+});
+</script>
+
+<!-- Custom CSS -->
+<style>
+/* 부모 컨테이너: 좌/우 비교 */
+.video-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px; /* Ours와 GT 사이 간격 증가 */
+  width: 100%;
+  max-width: 1200px;
+  margin: 20px auto; /* 탭과의 간격 추가 */
+}
+
+/* 개별 비디오 블록 */
+.video-block {
+  width: 50%;
+  text-align: center;
+}
+
+/* Ours / GT 글씨 스타일 */
+.video-label {
+  font-size: 1.5em; /* 글씨 크기 줄이기 */
+  margin-bottom: 10px; /* 글자 아래 간격 추가 */
+  font-weight: bold;
+  color: #333; /* 어두운 회색으로 변경 */
+}
+
+/* 비디오 크기 조절 */
+.video-half {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+</style>
+
+
 
 <!-- Bootstrap JS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
@@ -356,7 +382,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
             </html>
             <h2 class="subtitle" style="font-family: 'Raleway', sans-serif; margin-top: 15px; margin-bottom: 5px; text-align: center; font-size: 1.3em;">
-              Scene rendered with NerfStudio
+              Scene rendered with NerfStudio 🎨
             </h2>
             <br>
 </br>
@@ -385,29 +411,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
 </section>
 
-
-<section class="section">
-  <div class="container is-max-desktop">
-    <!--Qualitative results -->
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Qualitative Results </h2>
-        <div class="content has-text-justified">
-          <p>
-          </p>
-          <figure>
-          <img src="static/images/qual_final_2.png" alt="Teaser" style="width: 100%; height: auto;" />
-          <figcaption class="custom-caption" style="margin-top: 2px;">
-            <strong>Figure 2.</strong> Qualitative results on RWAVS dataset. Comparison of AV-Surf, AV-NeRF, and AV-GS against the Ground-truth.
-          </figcaption>
-        </figure>
-
-        </div>
-      </div>
-    </div>
-    <!--/Quanlitative. -->
-
-</section>
 
 
 
